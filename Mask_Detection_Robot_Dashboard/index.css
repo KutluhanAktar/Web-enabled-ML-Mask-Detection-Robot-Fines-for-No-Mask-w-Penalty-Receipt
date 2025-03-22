@@ -1,0 +1,38 @@
+html{background-color:#eb2e00;}
+button, h1, h2, p, label, legend, section{font-family: 'Stalinist One', cursive;font-weight:bold;}
+h1{color:#002699;text-align:center;}
+
+.container{position:relative;width:100%;height:600px;margin-top:50px;background-color:transparent;}
+.controls{position:absolute;top:0;right:0;width:50%;background-color:#2E3033;height:100%;overflow:hidden;border-radius:0 30px 30px 0;}
+.controls fieldset{border: 2px solid #F3D060;margin:auto;}
+.controls fieldset:nth-of-type(1){margin-top:20px;width:80%;}
+.controls legend{color:#F3D060;font-size:20px;user-select:none;}
+.controls section{position:relative;width:250px;height:250px;background-color:transparent;margin:auto;}
+.controls input[type="radio"]{position:absolute;display:block;height:0;width:0;user-select:none;}
+.controls label{position:absolute;font-size:15px;padding-left:50px;margin-left:40px;color:#F3D060;cursor:pointer;}
+.controls label:nth-of-type(1){top:0;left:70px;}
+.controls label:nth-of-type(2){top:100px;right:-30px;}
+.controls label:nth-of-type(3){top:100px;left:-40px;}
+.controls label:nth-of-type(4){bottom:20px;left:70px;}
+.mark{position:absolute;top:0;left:0;height:40px;width:40px;border-radius:50%;background-color:#A5282C;margin-right:10px;}
+.mark:after{content:'';position:absolute;top:10px;left:10px;width:20px;height:20px;border-radius:50%;background-color:#EE7762;}
+.controls label:hover .mark{background-color:#F3D060;}
+.controls input[type="radio"]:checked ~ .mark{background-color:#F3D060;} 
+.controls input[type="radio"]:checked ~ .mark:after{background-color:#5EB0E5;} 
+.controls select{width:50%;display:block;margin:auto;background-color:#A5282C;color:#F3D060;}
+
+.stream{position:relative;top:0;left:0;width:50%;background-color:#2E3033;height:100%;overflow:hidden;border-radius:30px 0 0 30px;}
+.stream h2{padding-left:10px;color:#F3D060;line-height:normal;font-size:20px;}
+.stream iframe{display:block;margin:auto;width:640px;height:480px;border:1px solid #F3D060;}
+
+@media only screen and (max-width: 321px) {
+	.controls label{padding-left:40px;margin-left:20px;}
+}
+
+@media only screen and (max-width: 800px) {
+	.container{height:auto;width:95%;margin:auto;margin-top:50px;}
+	.stream{position:relative;top:0;left:0;width:100%;height:400px;border-radius:30px 30px 0 0;}
+	.stream iframe{width:300px;height:300px;}
+	.controls{position:relative;height:auto;width:100%;border-radius:0 0 30px 30px;}
+	.controls fieldset:nth-of-type(1){width:90%;margin-bottom:30px;}
+}
